@@ -1,0 +1,48 @@
+#calculator{
+    width:300px;
+    height:500px;
+    background-color:#dcdcdc;
+    border:2px solid black;
+    border-radius:5px;
+    text-align:center;
+}
+#total{
+    height:10%;
+    padding:5px;
+    margin:5px 15px;
+    background-color:#fff;
+    font-size:47px;
+    text-align:right;
+}
+#operators{
+    padding:0px 5px;
+    margin:5px;
+}
+#operators a{
+    width:36px;
+    height:36px;
+    background-color:#808080;
+    padding:5px;
+    margin:5px;
+    float:left;
+    border-radius:3px;
+    font-size:34px;
+    text-align:center;
+    cursor:pointer;
+}
+#numbers{
+    padding:5px;
+    margin:5px;
+}
+#numbers a{
+    width:73px;
+    height:73px;
+    background-color:#808080;
+    padding:5px;
+    margin:5px;
+    float:left;
+    border-radius:3px;
+    text-align:center;
+    font-size:46px;
+    cursor:pointer;
+}
