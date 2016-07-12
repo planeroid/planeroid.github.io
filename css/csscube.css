@@ -42,11 +42,10 @@
     transform:translateY(100px) rotateX(-90deg);
 }
 #cube:nth-child(n){
-    animation-name:cube;
-    animation-duration:4s;
-    animation-iteration-count:infinite;
+    animation:cube 7s infinite;
 }
+
 @keyframes cube{
-    from{transform:rotate3d(0,0,0,0deg)}
-    to{transform:rotate3d(1,1,1,360deg);}
+    from{transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+    to{transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg);}
 }
