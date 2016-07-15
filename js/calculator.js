@@ -3,8 +3,6 @@ $(document).ready(function () {
     var number = "";
     var newnumber = "";
     var operator = "";
-
-
     $("#numbers > a").not("#clear,#allclear").click(function () {
         number += $(this).text();
         totaldiv.text(number);
@@ -73,7 +71,5 @@ $(document).ready(function () {
         } else if (event.which === 27) {
             $("#allclear").click();
         }
-
-
     });
 });

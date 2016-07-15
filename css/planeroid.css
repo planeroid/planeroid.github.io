@@ -1,6 +1,8 @@
-.jumbotron{
+.broadway{
     height:600px;
     margin-top:-20px;
+    margin-bottom:20px;
+    background-image:url('http://placehold.it/3823x2538');
 }
 .main {
     position:relative;
