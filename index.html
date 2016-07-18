@@ -8,6 +8,16 @@
   <script src="js/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="js/bootstrap.min.js"></script>
+  <!--typed.js by mattboldt-->
+  <script src="js/typed.js"></script>
+  <script>
+    $(function () {
+      $(".element").typed({
+        strings: ["Hello World!", "Lorem ipsum dolor sit amet", "consectetuer adipiscing elit.","Hello World!!"],
+        typeSpeed: 50,
+      });
+    });
+  </script>
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -54,7 +64,7 @@
   <div class="broadway">
     <div class="container">
       <div class="main">
-        <h1>Hello World!</h1>
+        <h1><span class="element"></span></h1>
       </div>
     </div>
   </div>
@@ -65,7 +75,7 @@
           <img src="http://placehold.it/200x200" alt="...">
           <div class="caption">
             <h3>This is sample text</h3>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
           </div>
         </div>
@@ -75,7 +85,7 @@
           <img src="http://placehold.it/200x200" alt="...">
           <div class="caption">
             <h3>This is sample text</h3>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
           </div>
         </div>
@@ -85,15 +95,31 @@
           <img src="http://placehold.it/200x200" alt="...">
           <div class="caption">
             <h3>This is sample text</h3>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div id="map"></div>
+    </div>
+    <div class="col-sm-6">
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    </div>
+  </div>
   <footer class="footer">
           <h1>This is the end of page</h1>
   </footer>
+  <!--Google Map API-->
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center:{lat:43.69, lng:-79.33},
+        zoom: 10,
+      });
+  </script>
 </body>
 </html>
