@@ -114,12 +114,15 @@
           <h1>This is the end of page</h1>
   </footer>
   <!--Google Map API-->
-  <script src="https://maps.googleapis.com/maps/api/js"></script>
-  <script>
-      var map = new google.maps.Map(document.getElementById('map'), {
+  <script async defer>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
         center:{lat:43.69, lng:-79.33},
         zoom: 10,
       });
+    }
   </script>
+  <script src="https://maps.googleapis.com/maps/api/js>key=AIzaSyASbJXpviV_a9FVcMhxLzMvfXI8OCNdRF8&v=3&callback=initMap"></script>
 </body>
 </html>
