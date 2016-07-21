@@ -24,17 +24,13 @@
     vertical-align:central;
     line-height:20px;
 }
-
-
 #wrap {
     perspective:500px;
     transform:translateY(200px);
 }
-
 #cube{
     transform-style:preserve-3d;
 }
-
 .face{
     margin-left:-100px;
     margin-top:-100px;
@@ -49,7 +45,6 @@
     text-align:center;
     font-size:150px;
     opacity:0.5;
-    
 }
 .face:first-child{
     transform:translateZ(100px);
@@ -70,10 +65,9 @@
     transform:translateY(100px) rotateX(-90deg);
 }
 #cube:nth-child(n){
-    animation:cube 7s infinite;
+    animation:cube 7s infinite linear;
 }
-
-@keyframes cube{1
+@keyframes cube{
     from{transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
     to{transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg);}
 }
@@ -158,4 +152,108 @@ html, body {
 #map{
   height: 200px;
   margin:0 15px;
+}
+#clock::before{
+    width:10%;
+    height:10%;
+    background-color:black;
+    content:"";
+    position:absolute;
+    left:45%;
+    top:45%;
+    border-radius:50%;
+}
+#clock{
+    width:400px;
+    height:400px;
+    margin:auto;
+    background-color:lightblue;
+    border-radius:50%;
+    border:2px solid black;
+    position:relative;
+}
+.clock_marker{
+    width:5%;
+    height:100%;
+    background-color:dimgray;
+    position:absolute;
+    left:47.5%;
+}
+.clock_marker.zerosix{
+    background-color:black;
+}
+.clock_marker.oneseven{
+    transform:rotate(30deg)
+}
+.clock_marker.twoeight{
+    transform:rotate(60deg)
+}
+.clock_marker.threenine{
+    background-color:black;
+    transform:rotate(90deg)
+}
+.clock_marker.fourten{
+    transform:rotate(120deg)
+}
+.clock_marker.fiveeleven{
+    transform:rotate(150deg)
+}
+#clock_inner{
+    width:80%;
+    height:80%;
+    background-color:lightblue;
+    position:absolute;
+    border-radius:50%;
+    left:10%;
+    top:10%;
+}
+#second{
+    height:100%;
+    width:100%;
+    background-color:lightcoral;
+    transform-origin:50% 80%;
+}
+#minute{
+    height:100%;
+    width:100%;
+    background-color:lightgreen;
+    transform-origin:50% 100%;
+    border:2px solid black;
+}
+#hour{
+    height:100%;
+    width:100%;
+    background-color:black;
+    transform-origin:50% 100%;
+}
+#hour_hand{
+    height:30%;
+    width:5%;
+    left:47.5%;
+    top:20%;
+    transform-origin:50% 100%;
+    position:absolute;
+    animation:hand 43200s infinite linear;
+}
+#minute_hand{
+    height:45%;
+    width:2%;
+    left:49%;
+    top:5%;
+    transform-origin:50% 100%;
+    position:absolute;
+    animation:hand 3600s infinite steps(60);
+}
+#second_hand{
+    height:50%;
+    width:0.6%;
+    left:50%;
+    top:10%;
+    transform-origin:50% 80%;
+    position:absolute;
+    animation:hand 60s infinite steps(60);
+}
+@keyframes hand{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
 }
