@@ -24,19 +24,20 @@
     vertical-align:central;
     line-height:20px;
 }
-#wrap {
+/*pure css cube start*/
+.wrap {
     perspective:500px;
-    transform:translateY(200px);
 }
 #cube{
     transform-style:preserve-3d;
+    height:500px;
 }
 .face{
     margin-left:-100px;
     margin-top:-100px;
+    position:absolute;
     top:50%;
     left:50%;
-    position:absolute;
     height:200px;
     width:200px;
     background-color:sandybrown;
@@ -71,6 +72,7 @@
     from{transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
     to{transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg);}
 }
+/*pure css cube end*/
 #calculator{
     margin:auto;
     width:300px;
@@ -131,6 +133,7 @@
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
+/*blink cursor start*/
 @keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
@@ -146,6 +149,7 @@
     50% { opacity:0; }
     100% { opacity:1; }
 }
+/*blink cursor end*/
 html, body {
   height: 100%;
 }
@@ -153,6 +157,7 @@ html, body {
   height: 200px;
   margin:0 15px;
 }
+/*pure css clock start*/
 #clock::before{
     width:10%;
     height:10%;
@@ -254,6 +259,53 @@ html, body {
     animation:hand 60s infinite steps(60);
 }
 @keyframes hand{
-    0%{transform:rotate(0deg);}
-    100%{transform:rotate(360deg);}
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
 }
+/*pure css clock end*/
+/*pure css gallery start*/
+.gallery{
+   margin-left:-100px;
+    margin-top:-100px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    height:200px;
+    width:200px;
+    background-color:sandybrown;
+    line-height:200px;
+    border:2px solid black;
+    text-align:center;
+    font-size:150px;
+    opacity:0.5;
+}
+.gallery:first-child{
+    transform:translateZ(173.2px);
+}
+.gallery:nth-child(2){
+    transform:translateX(150px) translateZ(86.6px) rotateY(60deg);
+}
+.gallery:nth-child(3){
+    transform:translateX(150px) translateZ(-86.6px) rotateY(120deg);
+}
+.gallery:nth-child(4){
+    transform:translateZ(-173.2px) rotateY(180deg);
+}
+.gallery:nth-child(5){
+    transform:translateX(-150px) translateZ(-86.6px) rotateY(240deg);
+}
+.gallery:nth-child(6){
+    transform:translateX(-150px) translateZ(86.6px) rotateY(300deg);
+}
+#board{
+    transform-style:preserve-3d;
+    height:500px;
+    animation:board linear infinite 10s;
+}
+@keyframes board{
+    from{ transform:rotateY(0deg);}
+    to{ transform:rotateY(360deg);}
+}
+/*pure css gallery end*/
+
+
